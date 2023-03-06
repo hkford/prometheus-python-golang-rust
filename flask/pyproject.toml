@@ -1,0 +1,19 @@
+[project]
+name = "Flask-Prometheus"
+version = "0.0.1"
+dependencies = [
+    "flask==2.2.2",
+    "prometheus-client",
+    "prometheus-flask-exporter"
+]
+
+[project.optional-dependencies]
+dev = [
+    "autopep8==1.6.0",
+    "flake8==4.0.1",
+    "black==22.3.0",
+    "mypy==0.950"
+]
+
+[tool.setuptools]
+py-modules = []

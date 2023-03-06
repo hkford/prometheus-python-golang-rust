@@ -1,0 +1,22 @@
+[package]
+name = "axum"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+metrics-exporter-prometheus = "0.11.0"
+axum = "0.6.1"
+tracing-subscriber = { version = "0.3.16", features = ["fmt","std","json", "env-filter"] }
+tokio = { version = "1.21.2", features = ["full"] }
+tracing = "0.1.37"
+serde = { version = "1.0.147", features = ["derive"] }
+tower = "0.4.13"
+http = "0.2.8"
+metrics = "0.20.1"
+rand = "0.8.5"
+
+[dev-dependencies]
+# for unit testing handlers
+axum-test-helper = "0.2"

@@ -46,7 +46,8 @@ curl http://localhost:8888/movies
 [{"ID":881},{"ID":947},{"ID":717}]
 # requests to Axum application
 $ curl -XPOST http://localhost:3000/movies
-[{"id":18168806418232667828}]$ curl -XPOes http://localhost:3000/movie
+[{"id":18168806418232667828}]
+$ curl -XPOST http://localhost:3000/movie
 [{"id":18168806418232667828},{"id":16276746138974980245}]
 $ curl http://localhost:3000/movies
 [{"id":18168806418232667828},{"id":16276746138974980245}]
@@ -100,7 +101,8 @@ curl http://localhost:8888/movies
 [{"ID":881},{"ID":947},{"ID":717}]
 # requests to Axum application
 $ curl -XPOST http://localhost:3000/movies
-[{"id":18168806418232667828}]$ curl -XPOes http://localhost:3000/movie
+[{"id":18168806418232667828}]
+$ curl -XPOST http://localhost:3000/movie
 [{"id":18168806418232667828},{"id":16276746138974980245}]
 $ curl http://localhost:3000/movies
 [{"id":18168806418232667828},{"id":16276746138974980245}]

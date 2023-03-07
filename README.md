@@ -42,7 +42,7 @@ $ curl -XPOST http://localhost:8888/movies
 [{"ID":881},{"ID":947}]
 $ curl -XPOST http://localhost:8888/movies
 [{"ID":881},{"ID":947},{"ID":717}]
-curl http://localhost:8888/movies
+$ curl http://localhost:8888/movies
 [{"ID":881},{"ID":947},{"ID":717}]
 # requests to Axum application
 $ curl -XPOST http://localhost:3000/movies
@@ -97,7 +97,7 @@ $ curl -XPOST http://localhost:8888/movies
 [{"ID":881},{"ID":947}]
 $ curl -XPOST http://localhost:8888/movies
 [{"ID":881},{"ID":947},{"ID":717}]
-curl http://localhost:8888/movies
+$ curl http://localhost:8888/movies
 [{"ID":881},{"ID":947},{"ID":717}]
 # requests to Axum application
 $ curl -XPOST http://localhost:3000/movies

@@ -23,7 +23,9 @@ services:
     image: public.ecr.aws/aws-observability/aws-otel-collector:v0.21.1
     command: ["--config=/etc/otel-agent-config.yaml"]
     volumes:
-      - ./adot-config/collector-config.yaml:/etc/otel-agent-config.yaml
+      - type: bind
+        source: ./adot-config/otel-agent-config.yaml
+        target: /etc/otel-agent-config.yaml
     depends_on:
       - "axum"
       - "echo"
@@ -35,7 +37,9 @@ services:
       - "--config.file=/etc/prometheus/prometheus.yaml"
       - "--web.enable-remote-write-receiver"
     volumes:
-      - ./prometheus-config/prometheus-only-itself.yaml:/etc/prometheus/prometheus.yaml
+      - type: bind
+        source: ./prometheus-config/prometheus.yaml
+        target: /etc/prometheus/prometheus.yaml
     ports:
       - 80:9090
     depends_on:

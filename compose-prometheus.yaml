@@ -24,7 +24,9 @@ services:
     command:
       - "--config.file=/etc/prometheus/prometheus.yaml"
     volumes:
-      - ./prometheus-config/prometheus.yaml:/etc/prometheus/prometheus.yaml
+      - type: bind
+        source: ./prometheus-config/prometheus.yaml
+        target: /etc/prometheus/prometheus.yaml
     ports:
       - 80:9090
     depends_on:
